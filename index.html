@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Dev Storage Utility — See what's eating your disk</title>
+    <meta name="description"
+        content="A developer-focused macOS storage analyzer. Scan Docker images, node_modules, Xcode caches, git history — and clean them up in one click.">
+    <meta name="author" content="Adnan Dossaji">
+    <meta property="og:title" content="Mac Dev Storage Utility">
+    <meta property="og:description" content="A developer-focused macOS storage analyzer built with Electron.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated gradient orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <img src="assets/icon.png" alt="App Icon" class="nav-icon">
+                <span>Mac Dev Storage Utility</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#categories">Categories</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://github.com/adnandossaji/mac-dev-storage/releases/latest"
+                    class="btn btn-sm">Download</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-badge">✨ 1 Free Scan · $15 Lifetime</div>
+            <h1>See what's <span class="gradient-text">really</span> eating your disk.</h1>
+            <p class="hero-sub">
+                macOS tells you "System Data: 80 GB". Cool. But <strong>what is it?</strong><br>
+                This app breaks it down into 14 developer-specific categories with exact file paths, risk levels, and
+                one-click cleanup.
+            </p>
+            <div class="hero-actions">
+                <a href="https://github.com/adnandossaji/mac-dev-storage/releases/latest"
+                    class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download Free Scan
+                </a>
+                <a href="#pricing" class="btn btn-ghost btn-lg">
+                    See Pricing →
+                </a>
+            </div>
+            <div class="hero-meta">
+                <span>macOS Sequoia & Sonoma</span>
+                <span class="dot">·</span>
+                <span>Apple Silicon</span>
+                <span class="dot">·</span>
+                <span>Electron 35 + React 19</span>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="features">
+            <h2>Built for developers who care about their disk.</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Startup</h3>
+                    <p>Cached results load in &lt;100ms. Fresh scans run progressively in the background — results
+                        appear as each category finishes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Risk Levels</h3>
+                    <p>Every item tagged as <span class="tag safe">Safe</span>, <span
+                            class="tag caution">Caution</span>, or <span class="tag keep">Keep</span> so you know
+                        exactly what's deletable.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧹</div>
+                    <h3>One-Click Cleanup</h3>
+                    <p>Select individual items or clean entire categories. Confirmation dialog shows exactly what will
+                        be deleted and how much space you'll reclaim.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>macOS-Style Bar</h3>
+                    <p>Color-coded stacked bar with inline labels — just like Storage Settings, but with categories that
+                        actually make sense to developers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Deep Scanning</h3>
+                    <p>Uses <code>du</code>, <code>find</code>, <code>diskutil</code>, and <code>docker system df</code>
+                        to find every byte hiding on your disk.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Safe by Design</h3>
+                    <p>System files are always marked as "Keep" and can't be selected for deletion. You'll never
+                        accidentally break your OS.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="categories">
+            <h2>14 developer-specific categories.</h2>
+            <p class="section-sub">Every byte on your disk, classified and explained.</p>
+            <div class="category-grid">
+                <div class="cat-chip"><span class="cat-icon">🐳</span> Docker</div>
+                <div class="cat-chip"><span class="cat-icon">📦</span> Node.js</div>
+                <div class="cat-chip"><span class="cat-icon">📱</span> iOS Dev</div>
+                <div class="cat-chip"><span class="cat-icon">📋</span> Package Managers</div>
+                <div class="cat-chip"><span class="cat-icon">🗄️</span> App Caches</div>
+                <div class="cat-chip"><span class="cat-icon">💾</span> App Data</div>
+                <div class="cat-chip"><span class="cat-icon">⚡</span> System Cache</div>
+                <div class="cat-chip"><span class="cat-icon">🔧</span> Dev Tools</div>
+                <div class="cat-chip"><span class="cat-icon">📂</span> Git History</div>
+                <div class="cat-chip"><span class="cat-icon">🗑️</span> Logs & Trash</div>
+                <div class="cat-chip"><span class="cat-icon">💻</span> Projects</div>
+                <div class="cat-chip"><span class="cat-icon">📁</span> Other Files</div>
+                <div class="cat-chip"><span class="cat-icon">🍎</span> macOS System</div>
+                <div class="cat-chip"><span class="cat-icon">❓</span> Unaccounted</div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="tech-stack">
+            <div class="tech-items">
+                <div class="tech-item">
+                    <strong>Electron 35</strong>
+                    <span>Desktop runtime</span>
+                </div>
+                <div class="tech-item">
+                    <strong>React 19</strong>
+                    <span>UI framework</span>
+                </div>
+                <div class="tech-item">
+                    <strong>Vite 6</strong>
+                    <span>Build tooling</span>
+                </div>
+                <div class="tech-item">
+                    <strong>Vanilla CSS</strong>
+                    <span>Dark glassmorphism</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="pricing">
+            <h2>Simple, one-time pricing.</h2>
+            <p class="section-sub">No subscriptions. No recurring fees. Pay once, use forever.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-badge">Try it</div>
+                    <h3>Free</h3>
+                    <div class="pricing-price">$0</div>
+                    <ul class="pricing-features">
+                        <li>✓ 1 full storage scan</li>
+                        <li>✓ See all 14 categories</li>
+                        <li>✓ Risk-level breakdown</li>
+                        <li class="muted">✕ Cleanup & rescan locked</li>
+                    </ul>
+                    <a href="https://github.com/adnandossaji/mac-dev-storage/releases/latest"
+                        class="btn btn-ghost">Download Free Scan</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Best value</div>
+                    <h3>Pro — Lifetime</h3>
+                    <div class="pricing-price">$15<span>/once</span></div>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited scans</li>
+                        <li>✓ One-click cleanup</li>
+                        <li>✓ All future updates included</li>
+                        <li>✓ Lifetime access — no subscription</li>
+                    </ul>
+                    <a href="https://github.com/adnandossaji/mac-dev-storage/releases/latest"
+                        class="btn btn-primary">Download & Unlock in App</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <h2>Reclaim your disk space.</h2>
+            <p>Try it free. Upgrade for $15 — one time, lifetime access.</p>
+            <a href="https://github.com/adnandossaji/mac-dev-storage/releases/latest" class="btn btn-primary btn-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download for macOS
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built by <a href="https://github.com/adnandossaji" target="_blank" rel="noopener">Adnan Dossaji</a></p>
+    </footer>
+</body>
+
+</html>
